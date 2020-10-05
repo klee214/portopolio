@@ -1,0 +1,6 @@
+.nav-link.active{
+    border-left: #444 3px solid;
+}
+.nav-link{
+    font-size: 1rem;
+}

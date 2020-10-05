@@ -1,0 +1,32 @@
+.mapouter{
+    position:relative;
+    text-align:right;
+    height:500px;
+    width:600px;
+}.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    height:500px;
+    width:600px;
+}
+
+.contactContainer:hover{
+    transform: scale(1.1);
+    transition: 1s;
+    cursor: grab;
+}
+
+.overlayContact{
+    transition: 1s;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.contactContainer:hover .overlayContact{
+    height: 0px;
+    transition: 1s;
+}
