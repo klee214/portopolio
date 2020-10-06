@@ -6,15 +6,12 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-
 import './Progress.css'
 
-const Progress = (props => {
-
-    const [mode, setMode] = useState("out-in");
+const Progress = (() => {
+    const mode = "out-in";
     const [state, setState] = useState(0);
-
-    const [skillSetState, setSkillSetState] = useState([
+    const skillSetState = [
         {
             'type': 'web programming',
             'mern': {
@@ -74,11 +71,10 @@ const Progress = (props => {
                 percent: 80
             }
         }
-    ])
+    ];
 
     const progressCom = skillSetState.map((set, index) => {
         let barCom = []
-
         for (const key in set) {
             if (key !== 'type') {
                 barCom.push(<ProgressBar key={key} now={set[key].percent} title={set[key].title} />)
@@ -86,7 +82,6 @@ const Progress = (props => {
                 barCom.push(<h4 className='text-dark text-uppercase' key={'p-' + key}>{set[key]}</h4>)
             }
         }
-
         return (
             <Row className='bg-light progressRow border rounded my-5 py-3' key={'pro-' + index}>
                 <Col md={12}>
@@ -115,9 +110,6 @@ const Progress = (props => {
     } else if (state === 2) {
         changingBlock = progressCom[2]
     }
-
-    console.log('progress render')
-
     return (
         <Container className='changingBlock mt-5'>
             <div className="loader">Loading...</div>

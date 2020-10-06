@@ -2,8 +2,6 @@ import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import classes from "./Slider.module.css";
 
-import Button from "../UI/Button/Button";
-
 const Slider = (props) => {
   let carouselItem = null;
   if (props.information.url) {

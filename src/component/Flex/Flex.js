@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -9,16 +9,12 @@ import { CSSTransition } from 'react-transition-group';
 import './Flex.css'
 
 const Flex = props => {
-
-
     const eachRow = props.information.map(info => (
         <FlexItm
             info={info}
             key={info.id} />
     ))
-
     return (
-
         <CSSTransition
             in={props.show}
             timeout={300}
@@ -40,5 +36,4 @@ const Flex = props => {
         </CSSTransition>
     )
 }
-
 export default Flex
