@@ -19,10 +19,9 @@ const HeadBand = props => {
 
     const [scrollState, SetScrollStateSet] = useState('80px')
 
-    let _timeOut = null
-
     useEffect(() => {
         const handleScroll = (event) => {
+            let _timeOut = null
             const scrollY = window.scrollY
 
             if (_timeOut) {
@@ -44,8 +43,6 @@ const HeadBand = props => {
             window.removeEventListener('scroll', handleScroll);
         }
     }, [])
-
-    console.log('headband render')
 
     return (
         <div>

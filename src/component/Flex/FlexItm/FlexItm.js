@@ -1,8 +1,6 @@
 import React from "react";
 import Col from "react-bootstrap/Col";
 import { Link } from "react-router-dom";
-
-import Button from "../../UI/Button/Button";
 import Aux from "../../../Hoc/Auxiliary";
 
 const FlexItm = (props) => {
@@ -21,7 +19,6 @@ const FlexItm = (props) => {
 
   if (props.info.styles) {
     styles = { ...props.info.styles };
-    console.log(styles);
   }
 
   let pComponent = null;

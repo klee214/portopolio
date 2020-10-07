@@ -15,8 +15,8 @@ import link from "../../assets/icon/link.png";
 import weather from "../../assets/icon/weather.png";
 import profile from "../../assets/icon/profile.jpg";
 
-const Home = (props) => {
-  const carouselState = useState({
+const Home = () => {
+  const carouselState = {
     url: [book, chat, link, weather],
     head: ["BooKim", "WhosApp", "LinkedDev", "How is the weather"],
     text: [
@@ -36,50 +36,49 @@ const Home = (props) => {
       center: "text-center",
       left: "text-left",
     },
-  })[0];
+  };
 
-  const stengthColState = useState([
+  const stengthColState = [
     {
       id: "col_0-1",
       heading: "PASSION",
       content: [
-        "What I love, What I desire is learning a new skill, developing my skills and by doing so, contributing to a developer team.",
+        "What I love, What I desire is learning a new skill, developing my skills and by doing so, contributing to a developer team."
       ],
-      icon: heart,
+      icon: heart
     },
     {
       id: "col_0-2",
       heading: "COOPERATION",
       content: [
-        '"If you want to go fast, go alone. If you want to go far, go together." I believe in togetherness, it does make a huge difference',
+        '"If you want to go fast, go alone. If you want to go far, go together." I believe in togetherness, it does make a huge difference'
       ],
-      icon: idea,
+      icon: idea
     },
     {
       id: "col_0-3",
       heading: "IDEA",
       content: [
-        "Everyhing keeps changing and becomes obsolete, so does a computer technology. I and my idea is relatively fresh!",
+        "Everyhing keeps changing and becomes obsolete, so does a computer technology. I and my idea is relatively fresh!"
       ],
-      icon: think,
+      icon: think
     },
-  ])[0];
+  ];
 
-  const aboutMeBandState = useState({
+  const aboutMeBandState = {
     content: "Seneca student, computer geek and Kimin Lee. What else about me?",
     title: "About Me",
-    src:
-      "https://appliedtechnology.humber.ca/assets/images/programs/diploma/computer-programmer/computer-programmer-banner.jpg",
-  })[0];
+    src: "https://appliedtechnology.humber.ca/assets/images/programs/diploma/computer-programmer/computer-programmer-banner.jpg"
+  };
 
-  const aboutColState = useState([
+  const aboutColState = [
     {
       id: "col_1",
       imageSrc: profile,
       styles: {
         marginTop: "-100px",
       },
-      class_name: " rounded-circle d-md-block mx-auto",
+      class_name: " rounded-circle d-md-block mx-auto"
     },
     {
       id: "col_2",
@@ -89,42 +88,37 @@ const Home = (props) => {
           "2 years ago, I did military service back in my country and was discharged as sergeant in 2018. " +
           "It was great experience of learning how people could work for one goal and make an group achievement.",
         "With this idea, I have been trying to apply the skills to projects with group members in school. " +
-          "Among many topics that I have learned, I am especially interested in Web Programming and an automated testing. I have mainly learned and practiced MERN/MEAN stack by coding some programs. I have done a couple of my personal projects with these. I am ready to contribute to your organization with my skills",
+          "Among many topics that I have learned, I am especially interested in Web Programming and an automated testing. I have mainly learned and practiced MERN/MEAN stack by coding some programs. I have done a couple of my personal projects with these. I am ready to contribute to your organization with my skills"
       ],
       class_name: " display-2 d-md-block d-none",
       //need to be changed
       isButton: true,
       url: "Contact",
-      btnText: "Contact Me",
+      btnText: "Contact Me"
     },
-  ])[0];
+  ];
 
-  const skillBandState = useState({
-    content:
-      "Database, Web Programming, Object Oriented programming, System Management, Data Communication and even Security. There are a lot of topics that I am familiar with",
+  const skillBandState = {
+    content: "Database, Web Programming, Object Oriented programming, System Management, Data Communication and even Security. There are a lot of topics that I am familiar with",
     title: "So! What can I do and have?",
-    src:
-      "https://vividcomm.files.wordpress.com/2019/12/gettyimages-638678352-c-68c1c89.jpg",
-  })[0];
+    src: "https://vividcomm.files.wordpress.com/2019/12/gettyimages-638678352-c-68c1c89.jpg"
+  };
 
-  const skillColState = useState([
+  const skillColState = [
     {
       id: "col_3",
       heading: "My Skills",
-      content: [
-        "From planning to testing and deploying, I have always worked in SDLC. No more words! Please look at what I have",
-      ],
+      content: ["From planning to testing and deploying, I have always worked in SDLC. No more words! Please look at what I have"],
       // need to be changed
       isButton: true,
       url: "skills",
-      btnText: "Learn More",
+      btnText: "Learn More"
     },
     {
       id: "col_4",
-      imageSrc:
-        "https://c0.wallpaperflare.com/preview/745/709/180/analysis-business-computer-connection.jpg",
+      imageSrc: "https://c0.wallpaperflare.com/preview/745/709/180/analysis-business-computer-connection.jpg"
     },
-  ])[0];
+  ];
 
   const [showStateOne, setShowStateOne] = useState(false);
   const [showStateTwo, setShowStateTwo] = useState(false);
@@ -139,14 +133,12 @@ const Home = (props) => {
 
       if (topPos - window.innerHeight < -200) {
         setShowStateOne(true);
-        console.log("one to true");
       }
       if (topPos - window.innerHeight >= -190) {
         setShowStateOne(false);
       }
       if (topPos_2 - window.innerHeight < -200) {
         setShowStateTwo(true);
-        console.log("two to true");
       }
       if (topPos_2 - window.innerHeight >= -190) {
         setShowStateTwo(false);
