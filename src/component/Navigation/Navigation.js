@@ -7,7 +7,7 @@ import classes from './Navigation.module.css'
 
 const Navigation = props => {
 
-    const navState = useState(['home', 'skills', 'works', 'contact'])[0]
+    const navState = useState(['Home', 'Skills', 'Works', 'Contact'])[0]
 
     const navItems = navState.map((item, index) => {
 
